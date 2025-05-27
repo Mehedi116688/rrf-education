@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slick-dots button{
+    display: none;
+}
+
+.slick-dots li{
+    width: 10px;
+    height: 10px;
+    background-color: #634700;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.slick-dots{
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    left: 135px;
+    top: 300px;
+}
+
+ul.slick-dots li.slick-active{
+    background-color: red;
+}
+
+.slick-arrow {
+    width: 6px;
+    height: 12px;
+    color: #FFB900;
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    top: -97px;
+    right: 58px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slick-arrow.arrow-prev{
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.slick-arrow.arrow-next{
+    left: auto;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.arrow-prev:hover{
+    background-color: #FFB900;
+    color: #FFFFFF;
+}
+
+.arrow-next:hover{
+    background-color: #FFB900;
+    color: #FFFFFF;
+}
+.blog-dots li{
+    width: 10px;
+    height: 10px;
+    background-color: #634700;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.blog-dots button{
+    display: none;
+}
+.blog-dots{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    bottom: -50px;
+    left: 50%;
+}
+
+.blog-dots .slick-active{
+    background-color: blue;
+}
