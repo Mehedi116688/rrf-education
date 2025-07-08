@@ -16,23 +16,54 @@
 
 </head>
 <body>
-    <div class="hero-area max-w-[1440px] h-[900px] bg-[#FFFCF4] px-[135px] flex flex-col gap-[64px]">
-        <div class="nav-bar mt-[36px] flex items-center w-[1170px] h-[50px]">
-            <h2 class="font-['Sen'] font-bold text-[24px] leading-[34px] text-[#171100]">Lesson<span class="font-bold text-[34px] text-[#FFB900]">.</span></h2>
-            <div class="nav-menu w-[359px] h-[28px]  ml-[512px] mr-[70px]">
-                <ul class="flex items-center gap-[42px]">
-                    <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Home</a></li>
-                    <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Courses</a></li>
-                    <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Pricing</a></li>
-                    <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Reviews</a></li>
-                </ul>
+    <section class="hero-area w-full max-w-[1440px] min-h-screen bg-[#FFFCF4] px-[5%] md:px-[8%] xl:px-[135px] flex flex-col gap-[40px] md:gap-[64px] mx-auto ">
+        <div class="nav-bar flex justify-between  mt-[20px] md:mt-[36px] items-center w-full max-w-[1170px] min-h-[50px] mx-auto">
+            <div class="logo">
+                <h2 class="font-['Sen'] font-bold text-[18px] md:text-[24px] leading-[34px] text-[#171100]">Lesson<span class="font-bold text-[34px] text-[#FFB900]">.</span></h2>
             </div>
-            <div class="menu-btn w-[144px] h-[50px] bg-[#171100] font-['Poppins'] flex items-center justify-center rounded-[24.5px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Sign Up</div>
+
+            <div class="flex gap-[20px]   items-center">
+            
+                <div class="nav-menu  hidden md:flex ">
+                    <ul class="flex items-center gap-[24px] lg:gap-[42px]">
+                        <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Home</a></li>
+                        <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Courses</a></li>
+                        <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Pricing</a></li>
+                        <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="menu-btn w-[120px] sm:w-[144px] h-[44px] sm:h-[50px] bg-[#171100] font-['Poppins'] flex items-center justify-center rounded-[24.5px] font-semibold text-[14px] sm:text-[16px] leading-[28px] text-[#FFFFFF]">
+                    <a href="#">Sign Up</a>
+                </div>
+
+                <!-- humburger menu -->
+                <div class="relative md:hidden">
+                    <input type="checkbox" id="menu-toggle" class="peer hidden">
+                    <label for="menu-toggle" class="relative cursor-pointer z-10">
+                        <img class="w-[30px]" src="images/humburger.png" alt="Menu Icon">
+                    </label>
+
+                    <div class="nav-menu  fixed top-[80px] right-0 w-[100%] h-screen bg-[#FFD4D0]/90 z-10 translate-x-full peer-checked:translate-x-0 duration-300 easy-in-out">
+                        <ul class="flex flex-col items-center gap-[24px] lg:gap-[42px]">
+                            <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53] hover:bg-black" href="#">Home</a></li>
+                            <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Courses</a></li>
+                            <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Pricing</a></li>
+                            <li><a class="block font-['Poppins'] text-[16px] leading-[28px] font-normal text-[#5F5B53]" href="#">Reviews</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+            </div>
         </div>
-        <div class="hero flex gap-[130px] w-[1170px] justify-between items-center ">
-            <div class="hero-image relative">
-                <img class="w-[470px] h-[685px] rounded-[20px]" src="images/hero.jpg" alt="">
-                <div class="image-box absolute bg-[#FFFFFF] w-[270px] h-[244px] top-[393px] left-[300px] rounded-[12px]">
+        
+        <div class="hero flex gap-[40px]  md:gap-[64px] w-full max-w-[1170px] justify-between flex-col md:flex-row mx-auto items-center">
+            <div class="hero-image relative  w-full md:w-1/2 max-w-[470px]">
+                <div class="max-w-[470px] h-auto">
+                    <img class="w-full h-full object-cover rounded-[20px]" src="images/hero.jpg" alt="">
+
+                </div>
+                <div class="image-box hidden md:block absolute bg-[#FFFFFF] w-full max-w-[270px] h-[244px] top-[75%] sm:left-[75%] lg:left-[80%] xl:left-[85%] -translate-x-1/2 -translate-y-1/2 rounded-[12px]">
                     <div class="image-box-content flex flex-col gap-[14px] pl-[24px] pt-[24px]">
                         <div class="flex  gap-[16px]">
                             <div class="w-[48px] h-[48px] bg-[#FFF9E8] flex justify-center items-center rounded-full">
@@ -66,14 +97,14 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-text w-[470px] h-[558px]  flex flex-col gap-[38px]">
-                <div class="flex flex-col gap-[22px]">
-                    <h2 class="font-['Sen'] text-[58px] leading-[68px] font-bold text-[#171100] tracking-tight">Learn without limits and spread knowledge.</h2>
-                    <p class="font-normal font-['Poppins'] text-[18px] leading-[30px] text-[#5F5B53]">Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.</p>
+            <div class="hero-text w-full md:w-1/2 max-w-[470px]   flex flex-col gap-[30px] md:gap-[38px]">
+                <div class="flex flex-col gap-[15px] md:gap-[22px]">
+                    <h2 class="font-['Sen'] text-3xl md:text-4xl lg:text-[58px] lg:leading-[68px] font-bold text-[#171100] tracking-tight">Learn without limits and spread knowledge.</h2>
+                    <p class="font-normal font-['Poppins'] text-sm md:text-base lg:text-[18px] leading-[30px] text-[#5F5B53]">Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.</p>
                 </div>
-                <div class="flex flex-col gap-[48px]">
-                    <div class="hero-btns flex gap-[28px] items-center">
-                        <button class="bg-[#FFB900] rounded-[32px] w-[180px] h-[64px] font-['Poppins'] text-[18px] leading-30px font-semibold text-[#FFFFFF] flex justify-center items-center">See Courses</button>
+                <div class="flex flex-col gap-[20px] md:gap-[20px] lg:gap-[48px]">
+                    <div class="hero-btns flex gap-[10px] sm:gap-[15px] md:gap-[20px] lg:gap-[28px] items-center">
+                        <button class="bg-[#FFB900] rounded-[32px] w-full max-w-[180px] h-[64px] font-['Poppins'] text-[18px] leading-30px font-semibold text-[#FFFFFF] flex justify-center items-center">See Courses</button>
                         <div class="vid-btn flex items-center gap-[14px]">
                             <span class="w-[40px] h-[40px] bg-[#FFFFFF] rounded-full flex justify-center items-center"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>
                             <a class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]" href="#">Watch Video</a>
@@ -90,38 +121,38 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="courses max-w-[1440px] mx-[135px] my-[200px] h-[645px]">
+    <section class="courses w-full max-w-[1440px] px-[60px] sm:px-[80px] md:px-[80px] xl:px-[135px] py-[200px] min-h-[645px]">
         <div class="flex flex-col gap-[55px]">
-            <div class="w-[458px] h-[124px] flex flex-col  gap-[16px]">
-                <h2 class="font-['Sen'] font-bold text-[38px] leading-[48px] tracking-tight	text-[#171100]">Our popular courses</h2>
-                <p class="font-['Poppins'] font-normal text-[18px] leading-[30px] text-[#5F5B53]">Build new skills with new trendy courses and shine for the next future career.</p>
+            <div class="w-full max-w-[458px] min-h-[124px] flex flex-col gap-2 md:gap-[16px]">
+                <h2 class="font-['Sen'] font-bold text-2xl md:text-3xl lg:text-[38px] leading-[48px] tracking-tight	text-[#171100]">Our popular courses</h2>
+                <p class="font-['Poppins'] font-normal text-sm md:text-base lg:text-[18px] leading-[30px] text-[#5F5B53]">Build new skills with new trendy courses and shine for the next future career.</p>
             </div>
-            <div class="course-card flex gap-[30px] w-[1170px] course-slider">
+            <div class="course-card flex gap-[20px] lg:gap-[30px] w-full max-w-[1170px] min-h-[466px] mx-auto course-slider">
                 <div class="single-slide-item">
-                    <div class="single-course-card w-[370px] h-[466px] flex flex-col gap-[16px] shadow">
-                        <div class="course-card-image">
-                            <img class="rounded-t-[12px] w-[370px] h-[278px]" src="images/box-image1.png" alt="">
+                    <div class="single-course-card max-w-[370px] h-[466px] flex flex-col gap-2 md:gap-[16px] shadow">
+                        <div class="course-card-image ">
+                            <img class="w-[370px] h-[278px] object-cover rounded-t-[12px]" src="images/box-image1.png" alt="">
                         </div>
-                        <div class="course-content bg-white px-[22px] pb-[22px] rounded-b-[12px]">
+                        <div class="course-content bg-white px-[16px] md:px-[22px] pb-[22px] rounded-b-[12px]">
                             <div class="flex flex-col gap-[12px]">
                                 <div class="flex flex-col gap-[6px]">
                                     <div class="flex justify-between items-center">
-                                        <h4 class="font-['Poppins'] font-semibold text-[18px] text-[#171100] leading-[30px]">Basic web design</h4>
+                                        <h4 class="font-['Poppins'] font-semibold text-[12px] md:text-[16px] lg:text-[18px] text-[#171100] leading-[30px]">Basic web design</h4>
                                         <div class="">
                                             <span class="flex gap-[6px] justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4.5</span>
 
                                         </div>
 
                                     </div>
-                                    <p class="text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
+                                    <p class="text-[12px] md:text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
                                 </div>
 
-                                <div class="flex justify-between items-center">
-                                    <p class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]">$120.75</p>
-                                    <div class="course-card-btn w-[118px] h-[50px] justify-center flex items-center bg-[#FFB900] rounded-[25px]">
-                                        <button class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
+                                <div class="flex justify-between gap-2 items-center">
+                                    <p class="font-['Poppins'] font-semibold text-base md:text-[18px] leading-[30px] text-[#171100]">$120.75</p>
+                                    <div class="course-card-btn w-full max-w-[118px] h-[50px] justify-center flex items-center bg-[#FFB900] rounded-[25px]">
+                                        <button class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -131,28 +162,28 @@
 
 
                 <div class="single-slide-item">
-                    <div class="single-course-card w-[370px] h-[466px] flex flex-col gap-[16px] shadow">
+                    <div class="single-course-card max-w-[370px] h-[466px] flex flex-col gap-2 md:gap-[16px] shadow">
                         <div class="course-card-image">
                             <img class="rounded-t-[12px] w-[370px] h-[278px]" src="images/box-image2.png" alt="">
                         </div>
-                        <div class="course-content bg-white px-[22px] pb-[22px] rounded-b-[12px]">
+                        <div class="course-content bg-white px-[16px] md:px-[22px] pb-[22px] rounded-b-[12px]">
                             <div class="flex flex-col gap-[12px]">
                                 <div class="flex flex-col gap-[6px]">
                                     <div class="flex justify-between items-center">
-                                        <h4 class="font-['Poppins'] font-semibold text-[18px] text-[#171100] leading-[30px]">UI/UX design</h4>
+                                        <h4 class="font-['Poppins'] font-semibold text-[12px] md:text-[16px] lg:text-[18px] text-[#171100] leading-[30px]">UI/UX design</h4>
                                         <div class="">
                                             <span class="flex gap-[6px] justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4.5</span>
 
                                         </div>
 
                                     </div>
-                                    <p class="text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
+                                    <p class="text-[12px] md:text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
                                 </div>
 
-                                <div class="flex justify-between items-center">
-                                    <p class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]">$120.75</p>
+                                <div class="flex justify-between gap-2 items-center">
+                                    <p class="font-['Poppins'] font-semibold text-base md:text-[18px] leading-[30px] text-[#171100]">$120.75</p>
                                     <div class="course-card-btn w-[118px] h-[50px] justify-center flex items-center bg-[#171100] rounded-[25px]">
-                                        <button class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
+                                        <button class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -162,28 +193,28 @@
 
 
                 <div class="single-slide-item">
-                    <div class="single-course-card w-[370px] h-[466px] flex flex-col gap-[16px] shadow">
+                    <div class="single-course-card max-w-[370px] h-[466px] flex flex-col gap-2 md:gap-[16px] shadow">
                         <div class="course-card-image">
                             <img class="rounded-t-[12px] w-[370px] h-[278px]" src="images/box-image3.png" alt="">
                         </div>
-                        <div class="course-content bg-white px-[22px] pb-[22px] rounded-b-[12px]">
+                        <div class="course-content bg-white px-[16px] md:px-[22px] pb-[22px] rounded-b-[12px]">
                             <div class="flex flex-col gap-[12px]">
                                 <div class="flex flex-col gap-[6px]">
                                     <div class="flex justify-between items-center">
-                                        <h4 class="font-['Poppins'] font-semibold text-[18px] text-[#171100] leading-[30px]">Web App design</h4>
+                                        <h4 class="font-['Poppins'] font-semibold text-[12px] md:text-[16px] lg:text-[18px] text-[#171100] leading-[30px]">Web App design</h4>
                                         <div class="">
                                             <span class="flex gap-[6px] justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4.5</span>
 
                                         </div>
 
                                     </div>
-                                    <p class="text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
+                                    <p class="text-[12px] md:text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
                                 </div>
 
-                                <div class="flex justify-between items-center">
-                                    <p class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]">$120.75</p>
+                                <div class="flex justify-between gap-2 items-center">
+                                    <p class="font-['Poppins'] font-semibold text-base md:text-[18px] leading-[30px] text-[#171100]">$120.75</p>
                                     <div class="course-card-btn w-[118px] h-[50px] justify-center flex items-center bg-[#171100] rounded-[25px]">
-                                        <button class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
+                                        <button class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -192,28 +223,28 @@
                 </div>
 
                 <div class="single-slide-item">
-                    <div class="single-course-card w-[370px] h-[466px] flex flex-col gap-[16px] shadow">
+                    <div class="single-course-card max-w-[370px] h-[466px] flex flex-col gap-2 md:gap-[16px] shadow">
                         <div class="course-card-image">
                             <img class="rounded-t-[12px] w-[370px] h-[278px]" src="images/box-image1.png" alt="">
                         </div>
-                        <div class="course-content bg-white px-[22px] pb-[22px] rounded-b-[12px]">
+                        <div class="course-content bg-white px-[16px] md:px-[22px] pb-[22px] rounded-b-[12px]">
                             <div class="flex flex-col gap-[12px]">
                                 <div class="flex flex-col gap-[6px]">
                                     <div class="flex justify-between items-center">
-                                        <h4 class="font-['Poppins'] font-semibold text-[18px] text-[#171100] leading-[30px]">Basic web design</h4>
+                                        <h4 class="font-['Poppins'] font-semibold text-[12px] md:text-[16px] lg:text-[18px] text-[#171100] leading-[30px]">Basic web design</h4>
                                         <div class="">
                                             <span class="flex gap-[6px] justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4.5</span>
 
                                         </div>
 
                                     </div>
-                                    <p class="text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
+                                    <p class="text-[12px] md:text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
                                 </div>
 
-                                <div class="flex justify-between items-center">
-                                    <p class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]">$120.75</p>
+                                <div class="flex justify-between gap-2 items-center">
+                                    <p class="font-['Poppins'] font-semibold text-base md:text-[18px] leading-[30px] text-[#171100]">$120.75</p>
                                     <div class="course-card-btn w-[118px] h-[50px] justify-center flex items-center bg-[#FFB900] rounded-[25px]">
-                                        <button class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
+                                        <button class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -223,28 +254,28 @@
 
 
                 <div class="single-slide-item">
-                    <div class="single-course-card w-[370px] h-[466px] flex flex-col gap-[16px] shadow">
+                    <div class="single-course-card max-w-[370px] h-[466px] flex flex-col gap-2 md:gap-[16px] shadow">
                         <div class="course-card-image">
                             <img class="rounded-t-[12px] w-[370px] h-[278px]" src="images/box-image2.png" alt="">
                         </div>
-                        <div class="course-content bg-white px-[22px] pb-[22px] rounded-b-[12px]">
+                        <div class="course-content bg-white px-[16px] md:px-[22px] pb-[22px] rounded-b-[12px]">
                             <div class="flex flex-col gap-[12px]">
                                 <div class="flex flex-col gap-[6px]">
                                     <div class="flex justify-between items-center">
-                                        <h4 class="font-['Poppins'] font-semibold text-[18px] text-[#171100] leading-[30px]">UI/UX design</h4>
+                                        <h4 class="font-['Poppins'] font-semibold text-[12px] md:text-[16px] lg:text-[18px] text-[#171100] leading-[30px]">UI/UX design</h4>
                                         <div class="">
                                             <span class="flex gap-[6px] justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4.5</span>
 
                                         </div>
 
                                     </div>
-                                    <p class="text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
+                                    <p class="text-[12px] md:text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
                                 </div>
 
-                                <div class="flex justify-between items-center">
-                                    <p class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]">$120.75</p>
+                                <div class="flex justify-between gap-2 items-center">
+                                    <p class="font-['Poppins'] font-semibold text-base md:text-[18px] leading-[30px] text-[#171100]">$120.75</p>
                                     <div class="course-card-btn w-[118px] h-[50px] justify-center flex items-center bg-[#171100] rounded-[25px]">
-                                        <button class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
+                                        <button class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -254,28 +285,28 @@
 
 
                 <div class="single-slide-item">
-                    <div class="single-course-card w-[370px] h-[466px] flex flex-col gap-[16px] shadow">
+                    <div class="single-course-card max-w-[370px] h-[466px] flex flex-col gap-2 md:gap-[16px] shadow">
                         <div class="course-card-image">
                             <img class="rounded-t-[12px] w-[370px] h-[278px]" src="images/box-image3.png" alt="">
                         </div>
-                        <div class="course-content bg-white px-[22px] pb-[22px] rounded-b-[12px]">
+                        <div class="course-content bg-white px-2 md:px-[22px] pb-[22px] rounded-b-[12px]">
                             <div class="flex flex-col gap-[12px]">
                                 <div class="flex flex-col gap-[6px]">
                                     <div class="flex justify-between items-center">
-                                        <h4 class="font-['Poppins'] font-semibold text-[18px] text-[#171100] leading-[30px]">Web App design</h4>
+                                        <h4 class="font-['Poppins'] font-semibold text-[12px] md:text-[16px] lg:text-[18px] text-[#171100] leading-[30px]">Web App design</h4>
                                         <div class="">
                                             <span class="flex gap-[6px] justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFB900" stroke="#FFB900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>4.5</span>
 
                                         </div>
 
                                     </div>
-                                    <p class="text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
+                                    <p class="text-[12px] md:text-[14px] font-['Poppins'] font-normal text-[#5F5B53] leading-[26px]">Get the best course, gain knowledge and shine for your future career.</p>
                                 </div>
 
-                                <div class="flex justify-between items-center">
-                                    <p class="font-['Poppins'] font-semibold text-[18px] leading-[30px] text-[#171100]">$120.75</p>
+                                <div class="flex justify-between gap-2 items-center">
+                                    <p class="font-['Poppins'] font-semibold text-base md:text-[18px] leading-[30px] text-[#171100]">$120.75</p>
                                     <div class="course-card-btn w-[118px] h-[50px] justify-center flex items-center bg-[#171100] rounded-[25px]">
-                                        <button class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
+                                        <button class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]">Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -283,12 +314,69 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
-    </div>
+    </section>
 
-    <div class="testimonial max-w-[1440px] h-[380px] bg-[#2E2100] ">
+    <section class="testimonial w-full max-w-[1440px] min-h-[380px] bg-[#2E2100] px-[50px] md:px-[100px] lg:px-[135px] py-[96px]">
         <div class="slider">
+            
             <div class="single-slide-item">
+                <div class="flex flex-col md:flex-row gap-[50px] md:gap-[100px] lg:gap-[241px]  w-full max-w-[1140px] justify-between items-center">
+                    <div class="client-info flex flex-col items-center md:place-items-start gap-[14px] md:gap-[18px] max-w-[159px] h-auto">
+                        <div class="client-image w-[72px] h-[72px] flex justify-center items-center rounded-full">
+                            <img class="w-full h-full object-cover" src="images/client-image.png" alt="">
+                        </div>
+                        <div class="flex items-center md:place-items-start flex-col gap-[4px]">
+                            <h4 class="font-['Sen'] font-bold text-[18px] md:text-[24px] leading-[34px] text-[#F7F7F7]">Peter Moor</h4>
+                            <p class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2] w-[159px]">Student of Web Design</p>
+                        </div>
+                    </div>
+                    <div class="comments flex max-w-[770px] h-auto">
+                        <span><svg class="max-w-[30px] h-[28px] fill-[#634700]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"/></svg></span>
+                        <p class="font-['Poppins'] font-normal text-base md:text-[18px] lg:text-[26px] leading-[40px] italic text-[#FFFFFF] mt-[10px]">Not only does my resume look impressive—filled with the names and logos of world-class institutions—but these certificates also bring me closer to my career goals by validating the skills I've learned." </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-slide-item">
+                <div class="flex flex-col md:flex-row gap-[50px] md:gap-[100px] lg:gap-[241px]  w-full max-w-[1140px] justify-between items-center">
+                    <div class="client-info flex flex-col items-center md:place-items-start gap-[14px] md:gap-[18px] max-w-[159px] h-auto">
+                        <div class="client-image w-[72px] h-[72px] flex justify-center items-center rounded-full">
+                            <img class="w-full h-full object-cover" src="images/client-image.png" alt="">
+                        </div>
+                        <div class="flex items-center md:place-items-start flex-col gap-[4px]">
+                            <h4 class="font-['Sen'] font-bold text-[18px] md:text-[24px] leading-[34px] text-[#F7F7F7]">Peter Moor</h4>
+                            <p class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2] w-[159px]">Student of Web Design</p>
+                        </div>
+                    </div>
+                    <div class="comments flex max-w-[770px] h-auto">
+                        <span><svg class="max-w-[30px] h-[28px] fill-[#634700]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"/></svg></span>
+                        <p class="font-['Poppins'] font-normal text-base md:text-[18px] lg:text-[26px] leading-[40px] italic text-[#FFFFFF] mt-[10px]">Not only does my resume look impressive—filled with the names and logos of world-class institutions—but these certificates also bring me closer to my career goals by validating the skills I've learned." </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-slide-item">
+                <div class="flex flex-col md:flex-row gap-[50px] md:gap-[100px] lg:gap-[241px]  w-full max-w-[1140px] justify-between items-center">
+                    <div class="client-info flex flex-col items-center md:place-items-start gap-[14px] md:gap-[18px] max-w-[159px] h-auto">
+                        <div class="client-image w-[72px] h-[72px] flex justify-center items-center rounded-full">
+                            <img class="w-full h-full object-cover" src="images/client-image.png" alt="">
+                        </div>
+                        <div class="flex items-center md:place-items-start flex-col gap-[4px]">
+                            <h4 class="font-['Sen'] font-bold text-[18px] md:text-[24px] leading-[34px] text-[#F7F7F7]">Peter Moor</h4>
+                            <p class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2] w-[159px]">Student of Web Design</p>
+                        </div>
+                    </div>
+                    <div class="comments flex max-w-[770px] h-auto">
+                        <span><svg class="max-w-[30px] h-[28px] fill-[#634700]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"/></svg></span>
+                        <p class="font-['Poppins'] font-normal text-base md:text-[18px] lg:text-[26px] leading-[40px] italic text-[#FFFFFF] mt-[10px]">Not only does my resume look impressive—filled with the names and logos of world-class institutions—but these certificates also bring me closer to my career goals by validating the skills I've learned." </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="single-slide-item">
                 <div class="flex gap-[241px] py-[96px] w-[1140px] mx-[135px] justify-between">
                     <div class="client-info flex flex-col gap-[18px] w-[159px] h-[188px]">
                         <div class="client-image w-[72px] h-[72px] flex justify-center items-center rounded-full">
@@ -306,7 +394,6 @@
                 </div>
             </div>
 
-
             <div class="single-slide-item">
                 <div class="flex gap-[241px] py-[96px] w-[1140px] mx-[135px] justify-between">
                     <div class="client-info flex flex-col gap-[18px] w-[159px] h-[188px]">
@@ -323,76 +410,58 @@
                         <p class="font-['Poppins'] font-normal text-[26px] leading-[40px] italic text-[#FFFFFF] mt-[10px]">Not only does my resume look impressive—filled with the names and logos of world-class institutions—but these certificates also bring me closer to my career goals by validating the skills I've learned." </p>
                     </div>
                 </div>
-            </div>
-
-            <div class="single-slide-item">
-                <div class="flex gap-[241px] py-[96px] w-[1140px] mx-[135px] justify-between">
-                    <div class="client-info flex flex-col gap-[18px] w-[159px] h-[188px]">
-                        <div class="client-image w-[72px] h-[72px] flex justify-center items-center rounded-full">
-                            <img class="" src="images/client-image.png" alt="">
-                        </div>
-                        <div class="flex flex-col gap-[4px]">
-                            <h4 class="font-['Sen'] font-bold text-[24px] leading-[34px] text-[#F7F7F7]">Peter Moor</h4>
-                            <p class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2] w-[159px]">Student of Web Design</p>
-                        </div>
-                    </div>
-                    <div class="comments flex w-[770px] h-[188px]">
-                        <span><svg class="w-[30px] h-[28px] fill-[#634700]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"/></svg></span>
-                        <p class="font-['Poppins'] font-normal text-[26px] leading-[40px] italic text-[#FFFFFF] mt-[10px]">Not only does my resume look impressive—filled with the names and logos of world-class institutions—but these certificates also bring me closer to my career goals by validating the skills I've learned." </p>
-                    </div>
-                </div>
-            </div>
+            </div> -->
 
         </div>
-    </div>
+    </section>
 
-    <div class="feature max-w-[1440px]  mx-[135px] my-[200px]">
-        <div class="flex gap-[130px] w-[1170px] h-[438px]  items-center justify-center">
-            <div class="w-[570px] h-[438px] flex gap-[30px] ">
-                <img class="w-[270px] h-[404px] mt-[34px] rounded-[16px]" src="images/feature1.png" alt="">
-                <img class="w-[270px] h-[405px] rounded-[16px]" src="images/feature2.png" alt="">
+    <section class="feature w-full max-w-[1440px]  py-[200px] px-[50px] md:px-[100px] lg:px-[135px] mx-auto">
+        <div class="flex flex-col md:flex-row gap-[50px] md:gap-[80px] lg:gap-[130px]  max-w-[1170px] min-h-[438px]  items-center justify-center mx-auto">
+            <div class="w-full max-w-[570px] min-h-[438px] mx-auto flex items-center flex-col sm:flex-row  gap-[30px] ">
+                <img class="max-w-[270px] h-[405px] mt-[34px] rounded-[16px]" src="images/feature1.png" alt="">
+                <img class="max-w-[270px] md:hidden xl:block h-[405px] rounded-[16px]" src="images/feature2.png" alt="">
             </div>
-            <div class="feture-content w-[470px] h-[322px]  flex flex-col gap-[32px]">
-                <div class="flex flex-col gap-[16px]">
-                    <h2 class="w-[470px] h-[96px] font-bold font-['Sen'] text-[38px] leading-[48px] tracking-tight text-[#171100]">Learner outcomes through our awesome platform</h2>
-                    <p class="w-[458px] h-[84px] font-normal font-['Poppins'] text-[16px] leading-[28px] text-[#5F5B53]">87% of people learning for professional development report career benefits like getting a promotion, a raise, or starting a new career.</p>
-                    <h4 class="font-normal font-['Poppins'] text-[16px] leading-[28px] text-[#5F5B53]">Lesson Impact Report (2022)</h4>
+            <div class="feture-content w-full max-w-[470px]   flex flex-col gap-4 md:gap-[32px]">
+                <div class="flex flex-col gap-2 md:gap-[16px]">
+                    <h2 class="  font-bold font-['Sen'] text-2xl md:text-3xl lg:text-[38px] leading-[48px] tracking-tight text-[#171100]">Learner outcomes through our awesome platform</h2>
+                    <p class="max-w-[458px]  font-normal font-['Poppins'] text-[14px] md:text-base leading-[28px] text-[#5F5B53]">87% of people learning for professional development report career benefits like getting a promotion, a raise, or starting a new career.</p>
+                    <h4 class="font-normal font-['Poppins'] text-[14px] md:text-base leading-[28px] text-[#5F5B53]">Lesson Impact Report (2022)</h4>
                 </div>
                 <div class="feature-btn w-[137px] h-[50px] bg-[#FFB900] rounded-[26px] flex justify-center items-center">
                     <button class="font-['Poppins'] text-[16px] leading-[28px] text-[#FFFFFF] font-semibold">Sign Up</button>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="cta-area max-w-[1440px] h-[440px] mx-[135px]">
-        <div class="w-[1170px] h-[440px]  flex gap-[130px] items-center justify-center">
-            <div class="cta-text w-[570px] h-[298px]  flex flex-col gap-[32px]">
+    <section class="cta-area w-full max-w-[1440px] min-h-[440px] px-[50px] md:px-[100px] lg:px-[135px]">
+        <div class="max-w-[1170px] min-h-[440px]  flex flex-col-reverse md:flex-row gap-[50px] md:gap-[80px] lg:gap-[130px] items-center justify-center">
+            <div class="cta-text w-full max-w-[570px] min-h-[298px]  flex flex-col gap-[32px]">
                 <div class="flex flex-col gap-[16px]">
-                    <h2 class="font-['Sen'] font-bold text-[38px] leading-[48px] text-[#171100] w-[570px] h-[144px]  tracking-tight">Take the next step toward your personal and professional goals with Lesson.</h2>
-                    <p class="font-['Poppins'] font-normal text-[16px] leading-[28px] text-[#5F5B53]">Take the next step toward. Join now to receive personalized  and more recommendations from the full Coursera catalog.</p>
+                    <h2 class="font-['Sen'] font-bold text-2xl md:text-3xl lg:text-[38px] leading-[48px] text-[#171100] max-w-[570px] h-auto  tracking-tight">Take the next step toward your personal and professional goals with Lesson.</h2>
+                    <p class="font-['Poppins'] font-normal text-[14px] text-base leading-[28px] text-[#5F5B53]">Take the next step toward. Join now to receive personalized  and more recommendations from the full Coursera catalog.</p>
                 </div>
                 <div class="feature-btn w-[137px] h-[50px] bg-[#FFB900] rounded-[26px] flex justify-center items-center">
                     <button class="font-['Poppins'] text-[16px] leading-[28px] text-[#FFFFFF] font-semibold">Sign Up</button>
                 </div>
             </div>
-            <div class="cta-image">
-                <img class="w-[470px] h-[440px] rounded-[20px]" src="images/feature2.png" alt="">
+            <div class="cta-image max-w-[470px] h-[440px]">
+                <img class="w-full h-full rounded-[20px]" src="images/feature2.png" alt="">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="blog-area max-w-[1440px] h-[878px] mx-[135px] mt-[200px] bg-[#FFFCF4]">
+    <section class="blog-area w-full max-w-[1440px] min-h-[878px] px-[50px] md:px-[120px] lg:px-[135px] mt-[200px] bg-[#FFFCF4] mx-auto">
         <div class="blog flex flex-col gap-[55px] items-center">
-            <div class="blog-head w-[448px] h-[120px]  flex flex-col gap-[16px] items-center">
-                <h2 class="font-['Sen'] font-bold text-[38px] leading-[48px] tracking-tight text-[#130606]">Our blog</h2>
-                <p class="font-['Poppins'] font-normal text-[16px] leading-[28px] text-[#696262] text-center">Read our regular travel blog and know the latest update of tour and travel</p>
+            <div class="blog-head max-w-[448px] min-h-[120px]  flex flex-col gap-[12px] md:gap-[16px] items-center">
+                <h2 class="font-['Sen'] font-bold text-2xl md:text-3xl lg:text-[38px] leading-[48px] tracking-tight text-[#130606]">Our blog</h2>
+                <p class="font-['Poppins'] font-normal text-sm md:text-base leading-[28px] text-[#696262] text-center">Read our regular travel blog and know the latest update of tour and travel</p>
             </div>
 
-            <div class="blog-card flex gap-[30px] w-[1170px] blog-silder">
+            <div class="blog-card flex gap-[20px] lg:gap-[30px] w-full max-w-[1170px] mx-auto blog-slider">
                 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog1.png" alt="">
                         </div>
@@ -420,7 +489,7 @@
                 </div>
 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog2.png" alt="">
                         </div>
@@ -449,7 +518,7 @@
 
                 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog3.png" alt="">
                         </div>
@@ -478,7 +547,7 @@
 
 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog1.png" alt="">
                         </div>
@@ -506,7 +575,7 @@
                 </div>
 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog2.png" alt="">
                         </div>
@@ -535,7 +604,7 @@
 
                 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog3.png" alt="">
                         </div>
@@ -564,7 +633,7 @@
 
 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog1.png" alt="">
                         </div>
@@ -592,7 +661,7 @@
                 </div>
 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog2.png" alt="">
                         </div>
@@ -621,7 +690,7 @@
 
                 
                 <div class="single-slide-item">
-                    <div class="single-blog-card w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
+                    <div class="single-blog-card w-full max-w-[370px] h-[467px] flex flex-col gap-[20px] shadow bg-[#FFFFFF] rounded-[16px]">
                         <div class="blog-card-image">
                             <img class="rounded-t-[16px] w-[370px] h-[250px]" src="images/blog3.png" alt="">
                         </div>
@@ -655,14 +724,18 @@
 
             
         </div>
-    </div>
+    </section>
+
+
+
+
     
-    <div class="footer max-w-[1440px] h-[428px] px-[135px] bg-[#2E2100] pt-[96px]">
-        <div class="w-[1170px] border-b border-[#59554B]">
-            <div class="flex gap-[145px] mb-[38px]">
-                <div class="flex flex-col gap-[18px] w-[267px] h-[163px]">
+    <section class="footer w-full max-w-[1440px] min-h-[428px] px-[80px] md:px-[100px] lg:px-[135px] bg-[#2E2100] pt-[96px]">
+        <div class="w-full max-w-[1170px] border-b border-[#59554B]">
+            <div class="flex flex-col md:flex-row gap-[60px] md:gap-[80px] lg:gap-[120px] xl:gap-[145px] mb-[38px] ">
+                <div class="flex flex-col gap-[18px] max-w-[267px] h-[163px]">
                     <h2 class="font-['Sen'] font-bold text-[24px] leading-[34px] text-[#FFFFFF]">Lesson<span class="font-bold text-[34px] text-[#FFB900]">.</span></h2>
-                    <p class="font-['Poppins'] font-normal text-[14px] leading-[34px] text-[#BFBCB2] tracking-0">Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.</p>
+                    <p class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[34px] text-[#BFBCB2] tracking-0">Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.</p>
                     <div class="social-icon">
                         <ul class="flex gap-[18px]">
                             <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 24 24" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a></li>
@@ -673,33 +746,33 @@
                     </div>
                 </div>
 
-                <div class="flex gap-[130px] footer-content ">
-                    <div class="footer-menu w-[130px] h-[211px]">
-                        <h3 class="font-['Poppins'] border-b border-[#59554B] w-[130px] pb-[14px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Company</h3>
+                <div class="flex justify-between gap-[40px] md:gap-[50px] xl:gap-[100px] footer-content">
+                    <div class="footer-menu max-w-[130px] min-h-[211px]">
+                        <h3 class="font-['Poppins'] border-b border-[#59554B] max-w-[130px] pb-[14px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Company</h3>
                         <ul class="mt-[28px] flex flex-col gap-[12px]">
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">About Us</a></li>
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Features</a></li>
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Our Pricing</a></li>
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Latest News</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">About Us</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Features</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Our Pricing</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Latest News</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-menu w-[137px] h-[211px]">
-                        <h3 class="font-['Poppins'] border-b border-[#59554B] w-[130px] pb-[14px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Support</h3>
+                    <div class="footer-menu max-w-[137px] min-h-[211px]">
+                        <h3 class="font-['Poppins'] border-b border-[#59554B] max-w-[130px] pb-[14px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Support</h3>
                         <ul class="mt-[28px] flex flex-col gap-[12px]">
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">FAQ’s</a></li>
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Terms & Conditions</a></li>
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Privacy Policy</a></li>
-                            <li><a class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Contact Us</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">FAQ’s</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Terms & Conditions</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Privacy Policy</a></li>
+                            <li><a class="font-['Poppins'] font-normal text-[12px] md:text-[14px] leading-[26px] text-[#BFBCB2]" href="#">Contact Us</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-menu w-[231px] h-[199px]">
-                        <h3 class="font-['Poppins'] border-b border-[#59554B] w-[130px] pb-[14px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Address</h3>
+                    <div class="footer-menu max-w-[231px] min-h-[199px]">
+                        <h3 class="font-['Poppins'] border-b border-[#59554B] max-w-[130px] pb-[14px] font-semibold text-[16px] leading-[28px] text-[#FFFFFF]">Address</h3>
                         <ul class="mt-[28px] flex flex-col gap-[12px]">
-                            <li><a class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]" href="#">Location: <span class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]">27 Division St, New York, NY 10002, USA</span></a></li>
-                            <li><a class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]" href="#">Email: <span class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]">email@gmail.com</span></a></li>
-                            <li><a class="font-['Poppins'] font-semibold text-[14px] leading-[26px] text-[#FFFFFF]" href="#">Phone: <span class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]">+ 000 1234 567 890</span></a></li>
+                            <li><a class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]" href="#">Location: <span class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]">27 Division St, New York, NY 10002, USA</span></a></li>
+                            <li><a class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]" href="#">Email: <span class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]">email@gmail.com</span></a></li>
+                            <li><a class="font-['Poppins'] font-semibold text-[12px] md:text-[14px] leading-[26px] text-[#FFFFFF]" href="#">Phone: <span class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#BFBCB2]">+ 000 1234 567 890</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -708,7 +781,7 @@
         <div class="copyright text-center">
             <p class="font-['Poppins'] font-normal text-[14px] leading-[26px] text-[#807D74] mt-[28px]">Copyright ©2022 webdesign.gdn All rights reserved</p>
         </div>
-    </div>
+    </section>
 
     
 </body>

@@ -20,8 +20,8 @@
     display: flex;
     gap: 5px;
     position: absolute;
-    left: 135px;
-    top: 300px;
+    left: calc(50%);
+    bottom: calc(-20%);
 }
 
 ul.slick-dots li.slick-active{
@@ -79,13 +79,24 @@ ul.slick-dots li.slick-active{
     display: none;
 }
 .blog-dots{
-    display: flex;
+    display: flex !important;
     gap: 5px;
     justify-content: center;
     position: absolute;
     align-items: center;
     bottom: -50px;
-    left: 50%;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.blog-slider .slick-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.course-slider .slick-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .blog-dots .slick-active{
